@@ -1,0 +1,25 @@
+test:
+  name: GPU Validation Test
+  duration_seconds: 120
+  sampling_interval_seconds: 1
+
+workload:
+  name: FurMark
+  command:
+    - /home/chic/Downloads/furmark/FurMark_linux64/furmark
+    - --demo
+    - furmark-gl
+    - --no-score-box
+
+limits:
+  temperature:
+    max_c: 88
+
+  power:
+    max_w: 295
+
+  gpu_utilization:
+    minimum_average_percent: 55
+
+  performance:
+    minimum_score: 0
